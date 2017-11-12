@@ -1,0 +1,11 @@
+- hosts: des
+  gather_facts: false
+  tasks:
+  - name: Ansible shell module multiple commands
+    shell: "cat {{ item }} "
+    with_items:
+      - hello.txt
+      - hello2.txt
+      - hello3.txt
+    args:
+      chdir: /tmp

@@ -1,0 +1,11 @@
+---
+  - hosts: all
+    gather_facts: false
+    tasks:
+      - name: multiples comandos
+        command: "{{ item }}"
+        with_items:
+           - w
+           - uptime
+           - who
+        register: cmds

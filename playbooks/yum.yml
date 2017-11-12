@@ -1,0 +1,16 @@
+---
+ - hosts: des
+   gather_facts: false
+   tasks:
+
+   - name: install the latest version of Apache
+     yum:
+       name: httpd
+       state: latest
+ 
+   - name: Make sure a service is running
+     systemd: 
+       state: started 
+       name: httpd
+       enabled: yes
+       masked: no
