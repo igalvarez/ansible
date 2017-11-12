@@ -1,0 +1,18 @@
+[all]
+
+[local]
+  control ansible_connection=local ansible_become=true 
+[crontrol:vars]
+  VAR1=xxxxxx
+
+[prod]
+  loadbalserver ansible_user=ansible ansible_become=true
+  webserver ansible_user=ansible ansible_become=true
+[prod:vars]
+  VAR2=yyyyyy
+
+[des]
+  dbserver ansible_user=ansible ansible_become=true
+[des:vars]
+  VAR1=xzzzzz
+
