@@ -1,0 +1,7 @@
+---
+  - hosts: prod
+    gather_facts: false
+    tasks:
+      - name: cat del motd del server y registarlo en la variable
+        command: "cat /etc/motd"
+        register: mymotd
