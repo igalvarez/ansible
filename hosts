@@ -11,14 +11,3 @@
 
 # Ex 1: Ungrouped hosts, specify before any group headers.
 
-#[webservers]
-#webserver ansible_user=ansible
-#
-#[databases]
-#dbserver ansible_user=ansible
-#
-#[loadbalancer]
-#loadbalserver ansible_user=ansible
-
-#[ansible]
-#control ansible_connection=local

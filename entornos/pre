@@ -1,3 +1,0 @@
-[databases]
-dbserver ansible_user=ansible ansible_become=true
-

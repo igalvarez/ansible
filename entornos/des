@@ -1,4 +1,0 @@
-
-[loadbalancer]
-loadbalserver ansible_user=ansible #ansible_become=true
-
