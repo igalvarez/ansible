@@ -15,4 +15,3 @@
   dbserver ansible_user=ansible ansible_become=true
 [des:vars]
   VAR1=xzzzzz
-

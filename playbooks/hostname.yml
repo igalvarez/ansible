@@ -1,5 +1,6 @@
 ---
- - hosts: all
+ - hosts: des
+   gather_facts: false
    tasks:
      - name: testing
-       command: hostname
+       command: uptime
