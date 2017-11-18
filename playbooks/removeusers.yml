@@ -1,0 +1,15 @@
+---
+ - hosts: des
+   gather_facts: false
+   tasks:
+
+   - name: add several users
+     user:
+       name: "{{ item.name }}"
+       state: absent
+       remove: yes
+#       groups: "{{ item.groups }}"
+     with_items:
+       - { name: 'testuser1' }
+       - { name: 'testuser2' }
+

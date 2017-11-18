@@ -1,0 +1,17 @@
+---
+ - hosts: des
+   gather_facts: false
+   tasks:
+
+   - name: add several users
+     user:
+       name: "{{ item.name }}"
+       state: present
+       createhome: yes
+       shell: /usr/bin/ksh
+       groups: "{{ item.groups }}"
+     with_items:
+       - { name: 'testuser1', groups: 'apache', comment: 'Users testuser1' }
+       - { name: 'testuser2', groups: 'games' , comment: 'Users testuser2' }
+     
+     command: usermod -L {{ item.name }}
